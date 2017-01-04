@@ -4,12 +4,13 @@
 class Derivatives
 {
 public:
-	Derivatives(int amountOfSamples, double h, double startPoint);
+	Derivatives(int amountOfSamples = 104, double h = 0.01, double startPoint = 0);
 	~Derivatives();
+	int runAlg();
+private:
 	void setFunction();
 	void calculateDerivative();
 	void reportResults();
-private:
 	std::vector <double> function[2];
 	std::vector <double> derivative;
 	//std::vector <double> derivativeDouble;

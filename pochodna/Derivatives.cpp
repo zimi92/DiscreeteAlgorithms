@@ -108,3 +108,10 @@ void Derivatives::reportResults() {
 		break;
 	}
 }
+
+int Derivatives::runAlg() {
+	setFunction();
+	calculateDerivative();
+	reportResults();
+	return 0;
+}
