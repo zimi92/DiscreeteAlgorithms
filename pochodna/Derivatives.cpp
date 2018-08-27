@@ -23,6 +23,7 @@ void Derivatives::setFunction() {
 	printf("1. y = a * x + b"  NL);
 	printf("2. y = a * x ^ 2 + b * x + c" NL);
 	printf("3. y = a / x" NL);
+	printf("4. set Your own values" NL);
 	int choice = 0;
 	std::cin >> choice;
 	switch (choice)
@@ -54,8 +55,21 @@ void Derivatives::setFunction() {
 		}
 		break;
 	}
+	case 4: {
+		int numberOfValues = 0;
+		printf("set how many samples:" NL);
+		std::cin >> numberOfValues;
+		m_amountOfSamples = numberOfValues-1;
+		double sample = 0;
+		for (int i = 0; i < numberOfValues; i++) {
+			std::cin >> sample;
+			function[1][i] = sample;
+		}
+	}
+		break;
 	default:
 		break;
+	
 	}
 }
 

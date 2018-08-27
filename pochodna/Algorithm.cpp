@@ -1,20 +1,18 @@
 #include "Algorithm.h"
 
-
-
-Algorithm::Algorithm()
+AlgorithmChoices::AlgorithmChoices()
 {
 }
 
 
-Algorithm::~Algorithm()
+AlgorithmChoices::~AlgorithmChoices()
 {
 }
 
-int Algorithm::chooseAlgorithm(int choice) {
+int AlgorithmChoices::chooseAlgorithm(AlgorithmName choice) {
 	switch (choice)
 	{
-	case 1:
+	case AlgorithmName::derivative:
 		derivatives.runAlg();
 		break;
 	default:

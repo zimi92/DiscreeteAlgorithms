@@ -2,9 +2,9 @@
 #include <vector>
 #include "Algorithm.h"
 int main() {
-	Algorithm alg;
+	AlgorithmChoices alg;
 
-	alg.chooseAlgorithm(1);
+	alg.chooseAlgorithm(AlgorithmName::derivative);
 	getchar();
 	getchar();
 

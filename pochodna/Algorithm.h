@@ -1,11 +1,17 @@
 #pragma once
 #include "Derivatives.h"
-class Algorithm
+enum class AlgorithmName
+{
+	derivative,
+
+};
+
+class AlgorithmChoices
 {
 public:
-	int chooseAlgorithm(int choice);
-	Algorithm();
-	~Algorithm();
+	int chooseAlgorithm(AlgorithmName choice);
+	AlgorithmChoices();
+	~AlgorithmChoices();
 private:
 	Derivatives derivatives;
 };
